@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dash SOS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <script type = "text/JavaScript">
+        function Safe() {
+            var data = "\"SAFE\"";
+            var xhr = new XMLHttpRequest();
+            xhr.withCredentials = true;
+            xhr.addEventListener("readystatechange", function () {
+                if (this.readyState === this.DONE) {
+                    console.log(this.responseText);
+                }
+            });
+            xhr.open("POST", "https://notify.run/VM3CtOHiizyyy6ZL");
+            xhr.send(data);
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <input style="margin-top: 320px; color: black; font-size: 46px;"
+        type = "button" class="btn btn-success"
+        onclick = "Safe();"
+        name = "ok"
+        value = "Mark Safe"
+        />
+    </center>  
+</body>
+</html>
